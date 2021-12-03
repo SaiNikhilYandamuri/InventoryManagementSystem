@@ -15,12 +15,13 @@ public class DatasetController {
 
     public void datasetCreation() {
         try{
-            fileHelper.fileReader();
+            fileHelper.fileReader(true);
         }catch (Exception e){
             System.out.println("The Dataset file path was not found. Please enter valid file path");
             System.exit(0);
         }
         readItems(fileHelper.getContentFile());
+
     }
 
     private void readItems(ArrayList<String> contentOfFile){
