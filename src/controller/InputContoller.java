@@ -5,6 +5,10 @@ import helper.FileHelper;
 import model.Items;
 import model.Order;
 import model.OrderItem;
+import stateHandler.ItemCategoryCapValidation;
+import stateHandler.ItemPresenceValidation;
+import stateHandler.ItemStockValidation;
+import stateHandler.ValidationHandler;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,7 +20,7 @@ public class InputContoller {
     private FileHelper fileHelper;
     private ArrayList<String> output = new ArrayList<>();
     private ArrayList<OrderItem> items = new ArrayList<>();
-    private HashSet<String> creditCards = new HashSet<>();
+    private HashSet<String> creditCards = database.getCardsSet();
     private double total = 0;
 
     public InputContoller(String filePath){
@@ -34,7 +38,7 @@ public class InputContoller {
     }
     public boolean checkOrder() {
         checkItemStock();
-        return output.isEmpty();
+        return output.size()==0;
     }
 
     public void calculateTotal() {
@@ -49,7 +53,8 @@ public class InputContoller {
     }
 
     public void checkoutOrder() {
-        database.getOrdersList().add(currentOrder);
+
+
         for(OrderItem orderItem: items){
             Items item = database.getItemsMap().get(orderItem.getName());
             item.setQuantity(item.getQuantity()-orderItem.getQuantity());
@@ -84,6 +89,17 @@ public class InputContoller {
 
     public boolean checkItemStock() {
         StringBuilder sb = new StringBuilder();
+        database.getOrdersList().add(currentOrder);
+        ValidationHandler itemPresence = new ItemPresenceValidation();
+        ValidationHandler itemStock = new ItemStockValidation();
+        ValidationHandler itemCategory = new ItemCategoryCapValidation();
+        if(!itemPresence.validate(items)){
+            output.add("One of the Item doesn't exist in the stock");
+        }else if(!itemStock.validate(items)){
+            output.add("Please correct quantities of one of the items");
+        }else if(!itemCategory.validate(items)){
+            output.add("Limit on one of the Categories has exceeded");
+        }
         for(OrderItem orderItem: items){
             Items item = database.getItemsMap().get(orderItem.getName());
             if(item.getQuantity()<orderItem.getQuantity()){
@@ -103,9 +119,10 @@ public class InputContoller {
     }
 
     public void generateOutputFile(){
-        System.out.println("Zing Zing Amazing");
-        if(output.isEmpty()){
-            output.add("Amout Paid");
+        //System.out.println("Zing Zing Amazing");
+        System.out.println(output.size());
+        if(output.size()==0){
+            output.add("Amount Paid");
             output.add(Double.toString((currentOrder.getTotalPrice())));
             try{
                 fileHelper.writeOuput(output,false);

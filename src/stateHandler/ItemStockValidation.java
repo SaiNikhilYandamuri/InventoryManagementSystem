@@ -1,0 +1,18 @@
+package stateHandler;
+
+import Database.Database;
+import model.OrderItem;
+
+import java.util.ArrayList;
+
+public class ItemStockValidation implements ValidationHandler{
+    @Override
+    public boolean validate(ArrayList<OrderItem> items) {
+        Database database = Database.getInstance();
+        for(OrderItem orderItem: items){
+            if(database.getItemsMap().get(orderItem.getName()).getQuantity()<orderItem.getQuantity())
+                return false;
+        }
+        return true;
+    }
+}
