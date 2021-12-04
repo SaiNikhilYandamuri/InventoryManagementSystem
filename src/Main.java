@@ -1,3 +1,4 @@
+import controller.CardController;
 import controller.DatasetController;
 import controller.InputContoller;
 
@@ -14,7 +15,9 @@ public class Main {
     private static void processStart(String[] args) throws IOException {
         DatasetController datasetController = new DatasetController(args[0]);
         datasetController.datasetCreation();
-        startOrder(args[1]);
+        CardController cardController = new CardController(args[1]);
+        cardController.cardCreation();
+        startOrder(args[2]);
     }
 
     private static void startOrder(String path){
