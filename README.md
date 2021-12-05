@@ -3,6 +3,18 @@
 ## Problem Statement
 We will develop a Marketplace application having the information of the inventory and users are allowed to purchase products by making products. There are a limited number of items in the inventory. There will be a cap on the quantity of items purchased from each category. If an order satisfies all the requirements, the total amount paid will be calculated and credit card details will be used to make the payment. 
 
+## Instructions to run the application:
+
+Needs Java 8 installed in the system that is running the program.
+
+### Instructions to run the JAR file:
+- Opem Command Prompt in the location of JAR File. <br>(Location of JAR File is: `<Present Directory>\out\artifacts\individual_project_SaiNikhilYandamuri_jar\individual-project-SaiNikhilYandamuri.jar)`. 
+- Run the following command in the command prompt:
+`java -jar <jar_name> "<Dataset File Path>" "<Card Information File Path>" "<Order Information File Path>"` <br>
+For Example: <br>
+`java -jar individual-project-SaiNikhilYandamuri.jar "<Dataset File Path>" "<Card Information File Path>" "<Order Information File Path>"`
+- Output files will be created in the directory as the files provided as arguments to run the JAR. 
+
 ## Design Patterns:
 - Singleton
 - Factory
@@ -35,18 +47,6 @@ We will develop a Marketplace application having the information of the inventor
 - Before we verify the order can be processed or not, ValidationHandler object is created and will be passed on from one Handler to another using the same.
 
 ![](Documents/ChainsOfResponsibility.png)
-
-## Instructions to run the application:
-
-Needs Java 8 installed in the system that is running the program.
-
-### Instructions to run the JAR file:
-- Opem Command Prompt in the location of JAR File. <br>(Location of JAR File is: `<Present Directory>\out\artifacts\individual_project_SaiNikhilYandamuri_jar\individual-project-SaiNikhilYandamuri.jar)`. 
-- Run the following command in the command prompt:
-`java -jar <jar_name> "<Dataset File Path>" "<Card Information File Path>" "<Order Information File Path>"` <br>
-For Example: <br>
-`java -jar individual-project-SaiNikhilYandamuri.jar "<Dataset File Path>" "<Card Information File Path>" "<Order Information File Path>"`
-- Output files will be created in the directory as the files provided as arguments to run the JAR. 
      
 ## Screenshots of Test Cases:
 
