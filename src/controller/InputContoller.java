@@ -23,8 +23,14 @@ public class InputContoller {
     private HashSet<String> creditCards = database.getCardsSet();
     private double total = 0;
 
+    public InputContoller() {}
+
     public InputContoller(String filePath){
         fileHelper = new FileHelper(filePath);
+    }
+
+    public void addToOutput(String str){
+        output.add(str);
     }
 
     public boolean startOrder() {
@@ -53,8 +59,6 @@ public class InputContoller {
     }
 
     public void checkoutOrder() {
-
-
         for(OrderItem orderItem: items){
             Items item = database.getItemsMap().get(orderItem.getName());
             item.setQuantity(item.getQuantity()-orderItem.getQuantity());
@@ -93,6 +97,8 @@ public class InputContoller {
         ValidationHandler itemPresence = new ItemPresenceValidation();
         ValidationHandler itemStock = new ItemStockValidation();
         ValidationHandler itemCategory = new ItemCategoryCapValidation();
+        itemPresence.nextHandler(itemStock);
+        itemStock.nextHandler(itemCategory);
         if(!itemPresence.validate(items)){
             output.add("One of the Item doesn't exist in the stock");
         }else if(!itemStock.validate(items)){
@@ -120,7 +126,6 @@ public class InputContoller {
 
     public void generateOutputFile(){
         //System.out.println("Zing Zing Amazing");
-        System.out.println(output.size());
         if(output.size()==0){
             output.add("Amount Paid");
             output.add(Double.toString((currentOrder.getTotalPrice())));
