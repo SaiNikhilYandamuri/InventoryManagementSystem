@@ -46,6 +46,7 @@ Needs Java 8 installed in the system that is running the program.
 `java -jar <jar_name> "<Dataset File Path>" "<Card Information File Path>" "<Order Information File Path>"` <br>
 For Example: <br>
 `java -jar individual-project-SaiNikhilYandamuri.jar "<Dataset File Path>" "<Card Information File Path>" "<Order Information File Path>"`
+- Output will be created in the directory as the files provided as arguments to run the JAR. 
      
 ## Screenshots of Test Cases:
 
