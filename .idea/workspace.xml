@@ -11,16 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5dd9c08-940a-42b4-ac5d-92946b4d57c3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/OrderSuccessfulFile_202112041907.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/checkoutFile_202112041904.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/checkoutFile_202112041905.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/errorLog_202112041904.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/individual_project_SaiNikhilYandamuri_jar/individual-project-SaiNikhilYandamuri.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/individual_project_SaiNikhilYandamuri_jar/individual-project-SaiNikhilYandamuri.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/InputContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InputContoller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stateHandler/ItemCategoryCapValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stateHandler/ItemCategoryCapValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stateHandler/ItemPresenceValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stateHandler/ItemPresenceValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stateHandler/ItemStockValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stateHandler/ItemStockValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stateHandler/ValidationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stateHandler/ValidationHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
