@@ -13,14 +13,17 @@ We will develop a Marketplace application having the information of the inventor
 - This pattern is used to build the database for the application. Only the Database class is used as part of this pattern.
 - Whenever an instance of the database is needed, the getIntance() method is called so that only one instance of the object can be reused.
 
+![](Docuemnts/Singleton.png)
+
 ## Factory:
 - It is a creational design pattern that provides an interface for creating objects in a superclass, but allows subcasses to alter the type of objects that will be created. 
 - We have used this pattern to output when an order is processed. The following files are as part of this pattern implementation: 
      - Interface OutputFile
      - Class CheckoutFile
      - Class ErrorFile
-     - Class FileHelper
 - When the respective concrete handler figures out the output should be a checkout file or error file, we will create an object of OutputFile. The FileReader class is used to read and create files in the application.
+
+![](Docuemnts/Factory.png)
 
 ## Chains of Responsilibilty:
 - It is a behavioral design pattern that lets you pass requests along a chain of handlers. Upon receiving a request, each handler decided either to process the request or to pass it to the next handler in the chain.
@@ -30,3 +33,5 @@ We will develop a Marketplace application having the information of the inventor
      - Class ItemStockValidation
      - Class ItemCategoryCapValidation
 - Before we verify the order can be processed or not, ValidationHandler object is created and will be passed on from one Handler to another using the same.
+
+![](Docuemnts/ChainsOfResponsibility.png)
