@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="individual-project-SaiNikhilYandamuri:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5dd9c08-940a-42b4-ac5d-92946b4d57c3" name="Changes" comment="" />
+    <list default="true" id="b5dd9c08-940a-42b4-ac5d-92946b4d57c3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/Input1 - Sheet1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/files/Input1 - Sheet1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/CheckoutFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/CheckoutFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/ErrorFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/ErrorFile.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.152439" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />

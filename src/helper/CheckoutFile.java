@@ -17,7 +17,7 @@ public class CheckoutFile implements OutputFile{
 
     @Override
     public void save(Path path) throws IOException {
-        FileWriter checkoutFile = new FileWriter(path.getParent().toString()+"/checkoutFile_"+new SimpleDateFormat("yyyyMMddHHmm").format(new Date())+".csv");
+        FileWriter checkoutFile = new FileWriter(path.getParent().toString()+"/OrderSuccessfulFile_"+new SimpleDateFormat("yyyyMMddHHmm").format(new Date())+".csv");
         for(String line:content)
             checkoutFile.write(line+"\n");
         checkoutFile.close();
