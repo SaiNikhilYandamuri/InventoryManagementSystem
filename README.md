@@ -1,4 +1,4 @@
-# individual-project-SaiNikhilYandamuri
+# Inventory Management System
 
 ## Problem Statement
 We will develop a Marketplace application having the information of the inventory and users are allowed to purchase products by making products. There are a limited number of items in the inventory. There will be a cap on the quantity of items purchased from each category. If an order satisfies all the requirements, the total amount paid will be calculated and credit card details will be used to make the payment. 
